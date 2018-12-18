@@ -64,6 +64,10 @@ let g:UltiSnipsExpandTrigger="<enter>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 Plugin 'prettier/vim-prettier'
+Plugin 'tpope/vim-surround'
+Plugin 'townk/vim-autoclose'
+Plugin 'kien/ctrlp.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -86,10 +90,12 @@ inoremap jk <ESC>
 "let mapleader = "<Space>"
 syntax on
 set number
+set smartindent
 set cursorline
 set clipboard=unnamed
 set shiftwidth=4
 set tabstop=4
+set expandtab
 filetype indent on
 
 colorscheme badwolf
@@ -122,3 +128,4 @@ let g:UltiSnipsListSnippets="<c-e>"
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>""
+
