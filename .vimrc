@@ -60,12 +60,11 @@ Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
 Plugin 'sirver/ultisnips'
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<enter>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:UltiSnipsExpandTrigger="<enter>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 Plugin 'prettier/vim-prettier'
 Plugin 'tpope/vim-surround'
-Plugin 'townk/vim-autoclose'
 Plugin 'kien/ctrlp.vim'
 
 
@@ -87,14 +86,14 @@ filetype plugin indent on    " required
 
 "======================== Basic Editor config =============================
 inoremap jk <ESC>
-"let mapleader = "<Space>"
+let mapleader = "<Space>"
 syntax on
 set number
 set smartindent
 set cursorline
 set clipboard=unnamed
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 filetype indent on
 
@@ -109,14 +108,14 @@ set hlsearch
 function! g:UltiSnips_Complete()
     call UltiSnips#ExpandSnippet()
     if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips#JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-               return "\<TAB>"
-            endif
-        endif
+	if pumvisible()
+		return "\<C-n>"
+	else
+		call UltiSnips#JumpForwards()
+		if g:ulti_jump_forwards_res == 0
+		   return "\<TAB>"
+		endif
+	endif
     endif
     return ""
 endfunction
@@ -127,5 +126,15 @@ let g:UltiSnipsListSnippets="<c-e>"
 " this mapping Enter key to <C-y> to chose the current highlight item 
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>""
+    
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+
+
 
