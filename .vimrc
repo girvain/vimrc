@@ -66,7 +66,8 @@ Plugin 'sirver/ultisnips'
 Plugin 'prettier/vim-prettier'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
-
+"Plugin 'rstacruz/vim-closer'
+Plugin 'raimondi/delimitmate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -86,7 +87,7 @@ filetype plugin indent on    " required
 
 "======================== Basic Editor config =============================
 inoremap jk <ESC>
-let mapleader = "<Space>"
+"let mapleader = "<Space>"
 syntax on
 set number
 set smartindent
