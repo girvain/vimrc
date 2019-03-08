@@ -46,11 +46,12 @@ map <C-n> :NERDTreeToggle<CR>
 Plugin 'w0rp/ale'
 let g:ale_linters = {'javascript': ['eslint']}
 
-"Plugin 'prettier/vim-prettier'
-"Plugin 'skywind3000/asyncrun.vim'
-"autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+Plugin 'prettier/vim-prettier'
+Plugin 'skywind3000/asyncrun.vim'
+autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 
 Plugin 'valloric/youcompleteme'
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
@@ -63,11 +64,12 @@ Plugin 'sirver/ultisnips'
 "let g:UltiSnipsExpandTrigger="<enter>"
 "let g:UltiSnipsJumpForwardTrigger="<c-b>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-Plugin 'prettier/vim-prettier'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 "Plugin 'rstacruz/vim-closer'
 Plugin 'raimondi/delimitmate'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'jceb/vim-orgmode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -128,14 +130,3 @@ let g:UltiSnipsListSnippets="<c-e>"
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
     
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
-
-
-
-
