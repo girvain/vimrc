@@ -70,6 +70,8 @@ Plugin 'raimondi/delimitmate'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'jceb/vim-orgmode'
 Plugin 'kaicataldo/material.vim'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-unimpaired'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -99,6 +101,14 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 filetype indent on
+
+" window navigation remapping
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+"remap exiting termainl to esc
+:tnoremap <Esc> <C-\><C-n>
 
 " Materialvim 
 let g:material_theme_style = 'dark'
@@ -149,3 +159,5 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+" fzf 
+set rtp+=/usr/local/opt/fzf
