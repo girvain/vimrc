@@ -67,11 +67,14 @@ Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 "Plugin 'rstacruz/vim-closer'
 Plugin 'raimondi/delimitmate'
+Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'jceb/vim-orgmode'
 Plugin 'kaicataldo/material.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
