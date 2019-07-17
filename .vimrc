@@ -71,6 +71,7 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'jceb/vim-orgmode'
 Plugin 'kaicataldo/material.vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'pangloss/vim-javascript'
@@ -92,9 +93,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
-"======================== Basic Editor config =============================
+"======================= Basic Editor config =============================
 inoremap jk <ESC>
-"let mapleader = "<Space>"
+let mapleader = "\<Space>"
 syntax on
 set number
 set smartindent
@@ -103,6 +104,7 @@ set clipboard=unnamed
 set shiftwidth=2
 set tabstop=2
 set expandtab
+set autoindent
 filetype indent on
 
 " window navigation remapping
@@ -117,8 +119,8 @@ nnoremap <c-l> <c-w>l
 let g:material_theme_style = 'dark'
 let g:airline_theme = 'material'
 set background=dark
-colorscheme material
-
+"colorscheme material
+colorscheme Gruvbox
 "colorscheme badwolf
 
 "search settings (this is a comment in vim)
@@ -164,3 +166,18 @@ endif
 
 " fzf 
 set rtp+=/usr/local/opt/fzf
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"                  fugitive 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"rebind my favorite commands from Git.vim for Fugitive
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gc :Gcommit<cr>
+nmap <leader>ga :Gwrite<cr>
+nmap <leader>gl :Glog<cr>
+nmap <leader>gd :Gdiff<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"                  delimitmate 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+let delimitMate_expand_cr=1
